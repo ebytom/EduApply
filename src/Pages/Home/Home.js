@@ -8,8 +8,9 @@ const Home = () => {
     const [searchval, setsearchval] = useState("")
     const [tempsearchval, setTempsearchval] = useState("")
     const [locationSelected, setlocationSelected] = useState("")
+    const [searchCity, setsearchCity] = useState("")
 
-    const [cities, setcities] = useState([
+    const [cities, setCities] = useState([
         "Bangalore",
         "Hyderabad",
         "Chennai",
@@ -18,7 +19,48 @@ const Home = () => {
         "Goa",
         "Kochi",
         "Madurai",
-    ])
+        "New York",
+        "Los Angeles",
+        "Chicago",
+        "Houston",
+        "Philadelphia",
+        "Phoenix",
+        "San Antonio",
+        "San Diego",
+        "Dallas",
+        "San Jose",
+        "Austin",
+        "Jacksonville",
+        "San Francisco",
+        "Columbus",
+        "Indianapolis",
+        "Seattle",
+        "Denver",
+        "Washington",
+        "Boston",
+        "El Paso",
+        "Nashville",
+        "Las Vegas",
+        "Portland",
+        "Louisville",
+        "Oklahoma City",
+        "Milwaukee",
+        "Albuquerque",
+        "Tucson",
+        "Fresno",
+        "Sacramento",
+        "Kansas City",
+        "Long Beach",
+        "Mesa",
+        "Atlanta",
+        "Colorado Springs",
+        "Virginia Beach",
+        "Raleigh",
+        "Omaha",
+        "Miami",
+        "Tulsa"
+    ]);
+
 
     const [school, setSchool] = useState([
         {
@@ -124,13 +166,24 @@ const Home = () => {
                     </>
                     :
                     <div className='w-100 d-flex flex-column align-items-center justify-content-center'>
-                        <h2 className='my-5'><b>Choose your city</b></h2>
-                        <div className='locGrid gap-4 w-50'>
+                        <div className='d-flex align-items-baseline'>
+                            <div><img src="bg1.png" className='w-100' /></div>
+                            <div className='w-100 d-flex flex-column align-items-center justify-content-center'>
+                                <h2 className='my-5 mb-4'><b>Choose your city</b></h2>
+                                <div className="d-flex">
+                                    <div className='bg-light d-flex align-items-center p-2 border border-black rounded-3 mb-4'>
+                                        <input onChange={(e) => setsearchCity(e.target.value)} className='bg-light' style={{ width: "500px", outline: "none", border: "none" }} type="search" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div><img src="bg2.png" className='w-100' /></div>
+                        </div>
+                        <div className='locGrid gap-4 w-100 px-5'>
                             {
-                                cities.map(city => {
+                                cities.filter(city => city.toLowerCase().includes(searchCity.toLowerCase())).slice(0, 20).map(city => {
                                     return (
-                                        <div onClick={() => setlocationSelected(city)} style={{ background: "#b4d0d4", boxShadow: "2px 3px 7px 0px #bebebe" }} className='d-flex btn align-items-center border border-black rounded p-3'>
-                                            <LocationIcon size={32} />
+                                        <div onClick={() => setlocationSelected(city)} style={{ background: "#b4d0d4", boxShadow: "2px 3px 7px 0px #bebebe" }} className='d-flex btn align-items-center border border-black rounded'>
+                                            <LocationIcon size={26} />
                                             <b className='ms-2 fs-6'>{city}</b>
                                         </div>
                                     )

@@ -59,19 +59,19 @@ const Login = () => {
             <section class=" w-75 p-2 p-md-2 p-xl-3">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-md-6 bsb-tpl-bg-platinum bg-primary rounded text-white">
+                        <div class="col-12 col-md-6 bsb-tpl-bg-platinum rounded border border-black text-white" style={{ backgroundColor: "#a7d1d7" }}>
                             <div class="d-flex flex-column justify-content-between h-100 p-3 p-md-4 p-xl-5">
-                                <h3 class="m-0">Welcome!</h3>
+                                <h3 class="m-0 fw-bold  text-black">Welcome!</h3>
                                 <img class="img-fluid rounded mx-auto my-4 w-100" loading="lazy" src="altAdmission.jpg" />
                                 {
                                     login ?
-                                        <p class="mb-0">Not a member yet? <a onClick={() => setlogin(false)} class="link-secondary text-decoration-none text-danger fw-bold">Register now</a></p>
+                                        <p class="mb-0 fw-bold text-black">Not a member yet? <a onClick={() => setlogin(false)} class="link-secondary text-decoration-none text-danger fw-bold btn">Register now</a></p>
                                         :
-                                        <p class="mb-0">Already a member yet? <a onClick={() => setlogin(true)} class="link-secondary text-decoration-none text-danger fw-bold">Login now</a></p>
+                                        <p class="mb-0 fw-bold text-black">Already a member yet? <a onClick={() => setlogin(true)} class="link-secondary text-decoration-none text-danger fw-bold btn">Login now</a></p>
                                 }
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 bsb-tpl-bg-lotion border border-3 rounded">
+                        <div class="col-12 col-md-6 bsb-tpl-bg-lotion border border-1 rounded border-black">
                             {
                                 login ?
                                     <div class="p-3 p-md-4 p-xl-5">

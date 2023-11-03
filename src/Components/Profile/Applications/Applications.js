@@ -1,4 +1,6 @@
+import { ArrowRightIcon } from '@primer/octicons-react';
 import React, { useEffect, useState } from 'react'
+import Track from '../../Track/Track';
 
 const Applications = () => {
 
@@ -11,8 +13,10 @@ const Applications = () => {
         }
     }, [])
 
+    const [open, setOpen] = useState(false)
+
     return (
-        <div className="p-3 w-100 rounded p-1" style={{ backgroundColor: "#eee" }}>
+        <div className="p-3 w-100 rounded p-1" style={{ backgroundColor: "#eee", overflow: "auto" }}>
             {
                 applications.length === 0 ?
                     <b className="text-secondary">No Applications Found</b>
@@ -29,8 +33,9 @@ const Applications = () => {
                                     <div>
                                         <b>{new Date(app?.timeStamp).toLocaleDateString()}</b>
                                     </div>
+                                    <div className="bg-light rounded btn p-0" onClick={() => setOpen(true)}><ArrowRightIcon /></div>
                                 </div>
-
+                                <Track open={open} setOpen={setOpen} appId={app?.timeStamp} />
                             </div>
                         )
                     })

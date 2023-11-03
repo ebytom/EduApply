@@ -1,7 +1,7 @@
 import { Button, Modal } from 'antd';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-const Track = ({ open, setOpen }) => {
+const Track = ({ open, setOpen, appId }) => {
 
 
     const [loading, setLoading] = useState(false);
@@ -24,10 +24,20 @@ const Track = ({ open, setOpen }) => {
 
     const applications = JSON.parse(localStorage.getItem("applications")) || [];
 
-    const checkStatus = () => {
+    useEffect(() => {
+        if (appId) {
+            checkStatus(appId)
+        }
+    }, [])
+
+
+
+    const checkStatus = (appNum) => {
+        console.log(appNum);
         setappStatus(null)
         applications.filter(app => {
-            if (String(app.timeStamp) === appNumber) {
+            if (String(app.timeStamp) === appNum) {
+                console.log("fdf");
                 setappStatus(app)
             }
         });
@@ -43,13 +53,18 @@ const Track = ({ open, setOpen }) => {
             ]}
         >
             <div className="my-3">
-                <div className="d-flex align-items-center">
-                    <b className='text-nowrap me-4'>Application Number</b>
-                    <input className="rounded w-100 p-2" onChange={(e) => {
-                        setAppNumber(e.target.value);
-                    }} />
-                </div>
-                <div className="btn btn-primary mt-4 w-100" onClick={() => { setappStatus(null); checkStatus() }}>Check Status</div>
+                {
+                    !appId &&
+                    <>
+                        <div className="d-flex align-items-center">
+                            <b className='text-nowrap me-4'>Application Numbers</b>
+                            <input className="rounded w-100 p-2" value={appNumber} onChange={(e) => {
+                                setAppNumber(e.target.value);
+                            }} />
+                        </div>
+                        <div className="btn btn-primary mt-4 w-100" onClick={() => { setappStatus(null); checkStatus(appNumber) }}>Check Status</div>
+                    </>
+                }
                 {
                     appStatus &&
                     <>

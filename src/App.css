@@ -51,7 +51,7 @@
 .locGrid {
   display: grid;
   gap: 20px;
-  grid: 75px / auto auto;
+  grid: 45px / auto auto auto auto;
   overflow: auto;
 }
 
