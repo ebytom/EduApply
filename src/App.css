@@ -32,7 +32,30 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+.grid-container {
+  height: 100%;
+  display: grid;
+  gap: 20px;
+  grid: 150px / auto auto;
+  overflow: auto;
+}
+
+.locGrid {
+  display: grid;
+  gap: 20px;
+  grid: 75px / auto auto;
+  overflow: auto;
+}
+
+.childGrid {
+  display: flex;
+  gap: 25px;
 }
