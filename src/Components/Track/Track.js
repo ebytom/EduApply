@@ -33,11 +33,9 @@ const Track = ({ open, setOpen, appId }) => {
 
 
     const checkStatus = (appNum) => {
-        console.log(appNum);
         setappStatus(null)
         applications.filter(app => {
-            if (String(app.timeStamp) === appNum) {
-                console.log("fdf");
+            if (String(app.timeStamp) === String(appNum)) {
                 setappStatus(app)
             }
         });
