@@ -27,9 +27,6 @@ const App = ({ openChild, setOpenChild, setChildren, children }) => {
 
     return (
         <>
-            <Button type="primary" onClick={showModal}>
-                Open Modal with customized footer
-            </Button>
             <Modal
                 open={openChild}
                 title="Choose Child"
