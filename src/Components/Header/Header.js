@@ -38,6 +38,10 @@ const Header = () => {
                     onClick={() => setOpen(true)} style={window.location.pathname === "/admission" ? { background: "white" } : {}}><b>Admission Tracker</b></div>
                 <div className='btn btn-black text-black rounded-2 d-flex justify-content-center align-items-center'
                     onClick={() => nav("/about")} style={window.location.pathname === "/about" ? { background: "white" } : {}}><b>About Us</b></div>
+                <div className='btn btn-black text-black rounded-2 d-flex justify-content-center align-items-center'
+                    onClick={() => nav("/studyMaterials")} style={window.location.pathname === "/studyMaterials" ? { background: "white" } : {}}><b>Study Materials</b></div>
+                <div className='btn btn-black text-black rounded-2 d-flex justify-content-center align-items-center'
+                    onClick={() => nav("/questionBank")} style={window.location.pathname === "/questionBank" ? { background: "white" } : {}}><b>Question Bank</b></div>
             </div>
             <div className='d-flex text-white align-items-center gap-3'>
                 {/* <div className='btn btn-danger p-2 rounded-5'><InboxIcon fill='white' size={26} /></div> */}

@@ -22,33 +22,41 @@ const items = [
     // getItem('Option 1', '1', <PieChartOutlined />),
     // getItem('Option 2', '2', <DesktopOutlined />),
     // getItem('Option 3', '3', <ContainerOutlined />),
-    getItem('Class', 'sub1', <MailOutlined />, [
-        getItem('Option 5', '5'),
+    getItem('Class', 'sub10', <MailOutlined />, [
+        getItem('Class 1', '1'),
+        getItem('Class 2', '2'),
+        getItem('Class 3', '3'),
+        getItem('Class 4', '4'),
+        getItem('Class 5', '5'),
+        getItem('Class 6', '6'),
+        getItem('Class 7', '7'),
+        getItem('Class 8', '8'),
+        getItem('Class 9', '9'),
+        getItem('Class 10', '10'),
     ]),
-    getItem('Monthly Fee Range', 'sub6', <AppstoreOutlined />, [
-        getItem('Option 9', '9'),
-        getItem('Option 10', '10'),
+    getItem('Fee Range', 'sub6', <AppstoreOutlined />, [
+        getItem('Less than 50,000', '11'),
+        getItem('50,000 - 1,00,000', '12'),
+        getItem('1,00,000 - 1,50,000', '13'),
+        getItem('1,50,000 - 2,00,000', '14'),
+        getItem('2,00,000 & Above', '15'),
     ]),
     getItem('Board', 'sub2', <AppstoreOutlined />, [
-        getItem('Option 9', '9'),
-        getItem('Option 10', '10'),
+        getItem('CBSE', '16'),
+        getItem('ICSE', '17'),
+        getItem('IB', '18'),
     ]),
-    // getItem('Distance Range', 'sub3', <AppstoreOutlined />, [
-    //     getItem('Option 9', '9'),
-    //     // getItem('Option 10', '10'),
-    // ]),
 
     getItem('School Type', 'sub4', <AppstoreOutlined />, [
-        getItem('Option 9', '9'),
-        getItem('Option 10', '10'),
-    ]),
-
-    getItem('Admission Range', 'sub5', <AppstoreOutlined />, [
-        getItem('Option 9', '9'),
-        getItem('Option 10', '10'),
+        getItem('Private School', '19'),
+        getItem('Government-aided schools', '20'),
+        getItem('International School', '21'),
+        getItem('National Open Schools', '22'),
+        getItem('Special-Needs Schools', '23'),
+        getItem('Govt School', '24'),
     ]),
 ];
-const App = ({}) => {
+const App = ({ }) => {
     const [collapsed, setCollapsed] = useState(false);
     const toggleCollapsed = () => {
         setCollapsed(!collapsed);

@@ -1,4 +1,4 @@
-import { LocationIcon, SearchIcon } from '@primer/octicons-react'
+import { ArrowRightIcon, LocationIcon, SearchIcon } from '@primer/octicons-react'
 import React, { useState } from 'react'
 import FilterComp from '../../Components/FilterComp/FilterComp'
 import SchoolCard from '../../Components/SchoolCard/SchoolCard'
@@ -129,7 +129,7 @@ const Home = () => {
                         <div className='bg-black p-2 rounded' style={{ overflow: "hidden", minHeight: "600px" }}>
                             <b className='text-white'>Filter</b>
                             <hr className='text-white' />
-                            <div className='btn btn-danger w-100 p-0 py-1 mb-3' onClick={() => setlocationSelected("")}>Change City</div>
+                            {/* <div className='btn btn-danger w-100 p-0 py-1 mb-3' onClick={() => setlocationSelected("")}>Change City</div> */}
                             <div className='mb-3 text-secondary'>
                                 Distance Range
                                 <div className='d-flex gap-2 text-white mt-2'><b>10 </b><input type="range" className="w-100" /><b> 100</b></div>
@@ -166,19 +166,31 @@ const Home = () => {
                     </>
                     :
                     <div className='w-100 d-flex flex-column align-items-center justify-content-center'>
-                        <div className='d-flex align-items-baseline'>
+                        <div className='d-flex align-items-baseline mt-4'>
                             <div><img src="bg1.png" className='w-100' /></div>
-                            <div className='w-100 d-flex flex-column align-items-center justify-content-center'>
+                            {/* <div className='w-100 d-flex flex-column align-items-center justify-content-center'>
                                 <h2 className='my-5 mb-4'><b>Choose your city</b></h2>
                                 <div className="d-flex">
                                     <div className='bg-light d-flex align-items-center p-2 border border-black rounded-3 mb-4'>
                                         <input onChange={(e) => setsearchCity(e.target.value)} className='bg-light' style={{ width: "500px", outline: "none", border: "none" }} type="search" />
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                             <div><img src="bg2.png" className='w-100' /></div>
+                            <div><img src="bg1.png" className='w-100' /></div>
+                            {/* <div><img src="bg2.png" className='w-100' /></div> */}
                         </div>
-                        <div className='locGrid gap-4 w-100 px-5'>
+
+                        <div className="mt-4 d-flex flex-column align-items-center">
+                            <b className='fs-5 d-flex' style={{ color: "#001529", textAlignLast: "center" }}>"Struggling to find the best school in your city? Don't worry, Alt Admissions is here to guide you. <br />Discover your perfect school with us!"</b>
+                            <div onClick={() => setlocationSelected(true)}
+                                className="btn btn-primary rounded-5 px-5 py-2 w-25 mt-5 d-flex align-items-center gap-2 justify-content-center" style={{ minWidth: "100px" }}>
+                                <b>Let's go</b>
+                                <ArrowRightIcon size={24} />
+                            </div>
+                        </div>
+
+                        {/* <div className='locGrid gap-4 w-100 px-5'>
                             {
                                 cities.filter(city => city.toLowerCase().includes(searchCity.toLowerCase())).slice(0, 20).map(city => {
                                     return (
@@ -189,7 +201,7 @@ const Home = () => {
                                     )
                                 })
                             }
-                        </div>
+                        </div> */}
                     </div>
             }
 

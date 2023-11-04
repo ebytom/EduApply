@@ -8,6 +8,8 @@ import Login from '../Pages/Login/Login'
 import Apply from '../Pages/Apply/Apply'
 import ApplicationForm from '../Pages/ApplicationForm/ApplicationForm'
 import About from '../Pages/About/About'
+import QuestionBank from '../Pages/QuestionBank/QuestionBank'
+import StudyMaterials from '../Pages/StudyMaterials/StudyMaterials'
 
 const Routes = () => {
 
@@ -26,6 +28,8 @@ const Routes = () => {
                             <Route path="/about" element={<About />} />
                             <Route path="/profile/*" element={<Profile />} />
                             <Route path="/apply" element={<Apply />} />
+                            <Route path="/questionBank" element={<QuestionBank />} />
+                            <Route path="/studyMaterials" element={<StudyMaterials />} />
                             <Route path="/applicationForm" element={<ApplicationForm />} />
                             <Route path="/*" element={<Home />} />
                         </Switch>
