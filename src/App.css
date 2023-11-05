@@ -41,11 +41,11 @@
 
 
 .grid-container {
-  height: 100%;
+  /* height: 100%; */
   display: grid;
   gap: 20px;
   grid: 150px / auto auto;
-  overflow: auto;
+  /* overflow: auto; */
 }
 
 .locGrid {
