@@ -10,6 +10,7 @@ import ApplicationForm from '../Pages/ApplicationForm/ApplicationForm'
 import About from '../Pages/About/About'
 import QuestionBank from '../Pages/QuestionBank/QuestionBank'
 import StudyMaterials from '../Pages/StudyMaterials/StudyMaterials'
+import Schools from '../Pages/Schools/Schools'
 
 const Routes = () => {
 
@@ -31,14 +32,18 @@ const Routes = () => {
                             <Route path="/questionBank" element={<QuestionBank />} />
                             <Route path="/studyMaterials" element={<StudyMaterials />} />
                             <Route path="/applicationForm" element={<ApplicationForm />} />
+                            <Route path="/schools" element={<Schools />} />
                             <Route path="/*" element={<Home />} />
                         </Switch>
                         :
                         <Switch>
                             <Route path="/" element={<Home />} />
                             <Route path="/home" element={<Home />} />
+                            <Route path="/schools" element={<Schools />} />
                             <Route path="/admission" element={<Home />} />
                             <Route path="/tracker" element={<Home />} />
+                            <Route path="/questionBank" element={<QuestionBank />} />
+                            <Route path="/studyMaterials" element={<StudyMaterials />} />
                             <Route path="/about" element={<About />} />
                             <Route path="/login" element={<Login />} />
                             <Route path="/*" element={<Login />} />

@@ -16,7 +16,7 @@ const Header = () => {
     return (
         <div className='d-flex w-100 p-2 px-4 justify-content-between border border-black' style={{ height: "80px", width: "100vw", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", background: "#b4d0d4" }}>
             <div className='d-flex align-items-center'>
-                <img src='/altAdmission.jpg' className='rounded-3' height={"60px"} />
+                <img src='/altAdmission.jpg' onClick={()=>nav('/')} className='btn p-0 m-0 rounded-3' height={"60px"} />
                 {/* <select className='ms-3 rounded-3 text-black bg-white' style={{ width: "150px", height: "50px" }}>
                     <option><b>📌 Select City</b></option>
                     <option>Bangalore</option>
@@ -33,7 +33,7 @@ const Header = () => {
             </div> */}
             <div className='d-flex gap-3 p-2 text-black rounded-3'>
                 <div className='btn btn-black text-black rounded-2 d-flex justify-content-center align-items-center'
-                    onClick={() => nav("/")} style={window.location.pathname === "/" ? { background: "white" } : {}}><b>Explore Schools</b></div>
+                    onClick={() => nav("/schools")} style={window.location.pathname === "/schools" ? { background: "white" } : {}}><b>Explore Schools</b></div>
                 <div className='btn btn-black text-black rounded-2 d-flex justify-content-center align-items-center'
                     onClick={() => setOpen(true)} style={window.location.pathname === "/admission" ? { background: "white" } : {}}><b>Admission Tracker</b></div>
                 <div className='btn btn-black text-black rounded-2 d-flex justify-content-center align-items-center'
