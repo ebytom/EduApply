@@ -15,6 +15,13 @@ const Applications = () => {
 
     const [open, setOpen] = useState(false)
 
+    var track = ""
+
+    const openTrack = (trackId) => {
+        track= String(trackId)
+        setOpen(track)
+    }
+
     return (
         <div className="p-3 w-100 rounded p-1" style={{ backgroundColor: "#eee", overflow: "auto" }}>
             {
@@ -33,13 +40,13 @@ const Applications = () => {
                                     <div>
                                         <b>{new Date(app?.timeStamp).toLocaleDateString()}</b>
                                     </div>
-                                    <div className="bg-light rounded btn p-0" onClick={() => setOpen(true)}><ArrowRightIcon /></div>
+                                    <div className="bg-light rounded btn p-0" onClick={() => openTrack(app?.timeStamp)}><ArrowRightIcon /></div>
                                 </div>
-                                <Track open={open} setOpen={setOpen} appId={app?.timeStamp} />
                             </div>
                         )
                     })
             }
+            <Track open={open} setOpen={setOpen} appId={track}/>
         </div>
     )
 }

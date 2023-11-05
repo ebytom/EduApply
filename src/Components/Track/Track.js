@@ -25,12 +25,11 @@ const Track = ({ open, setOpen, appId }) => {
     const applications = JSON.parse(localStorage.getItem("applications")) || [];
 
     useEffect(() => {
-        if (appId) {
-            checkStatus(appId)
+        if (typeof (open) == "string") {
+            console.log("hello");
+            checkStatus(open)
         }
-    }, [])
-
-
+    }, [open])
 
     const checkStatus = (appNum) => {
         setappStatus(null)
@@ -52,7 +51,7 @@ const Track = ({ open, setOpen, appId }) => {
         >
             <div className="my-3">
                 {
-                    !appId &&
+                    typeof (open) != "string" &&
                     <>
                         <div className="d-flex align-items-center">
                             <b className='text-nowrap me-4'>Application Numbers</b>
