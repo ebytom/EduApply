@@ -13,6 +13,7 @@ import { UserContext } from '../../App';
 import Personal from '../../Components/Profile/Personal/Personal';
 import ManageChild from '../../Components/Profile/ManageChild/ManageChild';
 import Applications from '../../Components/Profile/Applications/Applications';
+import AdminPanel from '../../Components/Profile/AdminPanel/AdminPanel';
 function getItem(label, key, icon, children) {
   return {
     key,
@@ -36,9 +37,12 @@ const Profile = () => {
     getItem(<div onClick={() => nav("/profile/manageChild")}>
       Manage Child
     </div>, '3', <CalendarOutlined />),
-    getItem('Common Form', '4', <CalendarOutlined />),
-    getItem('Shortlisted Schools', '5', <CalendarOutlined />),
-    getItem('Notification Settings', '6', <CalendarOutlined />),
+    getItem(<div onClick={() => nav("/profile/adminPanel")}>
+      Admin Panel
+    </div>, '4', <CalendarOutlined />),
+    getItem('Common Form', '5', <CalendarOutlined />),
+    getItem('Shortlisted Schools', '6', <CalendarOutlined />),
+    getItem('Notification Settings', '7', <CalendarOutlined />),
 
   ];
 
@@ -72,6 +76,7 @@ const Profile = () => {
           <Route path="/personal" element={<Personal />} />
           <Route path="/manageChild" element={<ManageChild />} />
           <Route path="/applications" element={<Applications />} />
+          <Route path="/adminPanel" element={<AdminPanel />} />
         </Switch>
 
 

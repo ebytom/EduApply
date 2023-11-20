@@ -1,6 +1,7 @@
 import { ArrowRightIcon } from '@primer/octicons-react';
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Track from '../../Track/Track';
+import { UserContext } from '../../../App';
 
 const Applications = () => {
 
@@ -13,14 +14,18 @@ const Applications = () => {
         }
     }, [])
 
+    const { user } = useContext(UserContext)
+
     const [open, setOpen] = useState(false)
 
     var track = ""
 
     const openTrack = (trackId) => {
-        track= String(trackId)
+        track = String(trackId)
         setOpen(track)
     }
+
+    console.log(user.email);
 
     return (
         <div className="p-3 w-100 rounded p-1" style={{ backgroundColor: "#eee", overflow: "auto" }}>
@@ -28,7 +33,7 @@ const Applications = () => {
                 applications.length === 0 ?
                     <b className="text-secondary">No Applications Found</b>
                     :
-                    applications?.map(app => {
+                    applications?.filter(app => app.user.email === user.email).map(app => {
                         return (
                             <div className='p-3 d-flex align-items-center justify-content-between bg-light w-100 rounded border border-2 my-2'>
                                 <div className='d-flex align-items-center justify-content-between w-100'>
@@ -46,7 +51,7 @@ const Applications = () => {
                         )
                     })
             }
-            <Track open={open} setOpen={setOpen} appId={track}/>
+            <Track open={open} setOpen={setOpen} appId={track} />
         </div>
     )
 }
