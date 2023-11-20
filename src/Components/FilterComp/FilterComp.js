@@ -35,11 +35,11 @@ const items = [
         getItem('Class 10', '10'),
     ]),
     getItem('Fee Range', 'sub6', <AppstoreOutlined />, [
-        getItem('Less than 50,000', '11'),
-        getItem('50,000 - 1,00,000', '12'),
-        getItem('1,00,000 - 1,50,000', '13'),
-        getItem('1,50,000 - 2,00,000', '14'),
-        getItem('2,00,000 & Above', '15'),
+        getItem('Less than 50,000', '11', <input type="checkbox" />),
+        getItem('50,000 - 1,00,000', '12', <input type="checkbox" />),
+        getItem('1,00,000 - 1,50,000', '13', <input type="checkbox" />),
+        getItem('1,50,000 - 2,00,000', '14', <input type="checkbox" />),
+        getItem('2,00,000 & Above', '15', <input type="checkbox" />),
     ]),
     getItem('Board', 'sub2', <AppstoreOutlined />, [
         getItem('CBSE', '16'),

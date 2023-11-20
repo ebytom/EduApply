@@ -16,7 +16,7 @@ const Header = () => {
     return (
         <div className='d-flex w-100 p-2 px-4 justify-content-between border border-black' style={{ height: "80px", width: "100vw", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", background: "#b4d0d4" }}>
             <div className='d-flex align-items-center'>
-                <img src='/altAdmission.jpg' onClick={()=>nav('/')} className='btn p-0 m-0 rounded-3' height={"60px"} />
+                <img src='/altAdmission.jpg' onClick={() => nav('/')} className='btn p-0 m-0 rounded-3' height={"60px"} />
                 {/* <select className='ms-3 rounded-3 text-black bg-white' style={{ width: "150px", height: "50px" }}>
                     <option><b>📌 Select City</b></option>
                     <option>Bangalore</option>
@@ -37,11 +37,11 @@ const Header = () => {
                 <div className='btn btn-black text-black rounded-2 d-flex justify-content-center align-items-center'
                     onClick={() => setOpen(true)} style={window.location.pathname === "/admission" ? { background: "white" } : {}}><b>Admission Tracker</b></div>
                 <div className='btn btn-black text-black rounded-2 d-flex justify-content-center align-items-center'
-                    onClick={() => nav("/about")} style={window.location.pathname === "/about" ? { background: "white" } : {}}><b>About Us</b></div>
-                <div className='btn btn-black text-black rounded-2 d-flex justify-content-center align-items-center'
                     onClick={() => nav("/studyMaterials")} style={window.location.pathname === "/studyMaterials" ? { background: "white" } : {}}><b>Study Materials</b></div>
                 <div className='btn btn-black text-black rounded-2 d-flex justify-content-center align-items-center'
                     onClick={() => nav("/questionBank")} style={window.location.pathname === "/questionBank" ? { background: "white" } : {}}><b>Question Bank</b></div>
+                <div className='btn btn-black text-black rounded-2 d-flex justify-content-center align-items-center'
+                    onClick={() => nav("/about")} style={window.location.pathname === "/about" ? { background: "white" } : {}}><b>About Us</b></div>
             </div>
             <div className='d-flex text-white align-items-center gap-3'>
                 {/* <div className='btn btn-danger p-2 rounded-5'><InboxIcon fill='white' size={26} /></div> */}

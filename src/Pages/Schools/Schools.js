@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import FilterComp from '../../Components/FilterComp/FilterComp'
 import SchoolCard from '../../Components/SchoolCard/SchoolCard'
 import { SearchIcon } from '@primer/octicons-react'
+import { useNavigate } from 'react-router-dom'
 
 const Schools = () => {
 
@@ -9,6 +10,8 @@ const Schools = () => {
     const [tempsearchval, setTempsearchval] = useState("")
     const [locationSelected, setlocationSelected] = useState("")
     const [searchCity, setsearchCity] = useState("")
+
+    const nav = useNavigate()
 
     const [school, setSchool] = useState([
         {
@@ -92,6 +95,9 @@ const Schools = () => {
                             <SearchIcon size={20} />
                             <b className='ms-2'>Search</b>
                         </div>
+                    </div>
+                    <div onClick={() => nav('/compare')} className='btn btn-primary p-2'>
+                        <b>Compare Schools</b>
                     </div>
                 </div>
                 <hr />
