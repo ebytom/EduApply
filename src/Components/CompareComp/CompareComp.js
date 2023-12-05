@@ -69,6 +69,7 @@ const CompareComp = () => {
         }
     ])
 
+
     return (
         <div className='w-100'>
             {

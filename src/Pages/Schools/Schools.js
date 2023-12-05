@@ -15,62 +15,96 @@ const Schools = () => {
 
     const [school, setSchool] = useState([
         {
-            "schoolname": "Maple High School",
-            "city": "New York",
+            "schoolname": "National Public School",
+            "city": "Bangalore",
             "board": "Public",
-            "cost": 10000,
-            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/Lebanon_High_School_Kentucky.jpg"
+            "cost": 150000,
+            "imageUrl": "https://npseast.com/img/homepage/NVT_School_View_04.jpg"
         },
         {
-            "schoolname": "Rosewood Academy",
-            "city": "Los Angeles",
-            "board": "Private",
-            "cost": 20000,
-            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/Lebanon_High_School_Kentucky.jpg"
-        },
-        {
-            "schoolname": "Pinecrest Elementary",
-            "city": "Chicago",
+            "schoolname": "New Horizon Public School",
+            "city": "Bangalore",
             "board": "Public",
-            "cost": 8000,
-            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/Lebanon_High_School_Kentucky.jpg"
+            "cost": 125000,
+            "imageUrl": "https://www.galaxyeduworld.com/storage/college_page/5db931acac466_1.jpg"
         },
         {
-            "schoolname": "Sunset Preparatory School",
-            "city": "Miami",
-            "board": "Private",
-            "cost": 25000,
-            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/Lebanon_High_School_Kentucky.jpg"
-        },
-        {
-            "schoolname": "Green Valley High",
-            "city": "San Francisco",
+            "schoolname": "Delhi Public School",
+            "city": "Bangalore",
             "board": "Public",
-            "cost": 9000,
-            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/Lebanon_High_School_Kentucky.jpg"
+            "cost": 135000,
+            "imageUrl": "https://boardingschoolsofindia.com/wp-content/uploads/2018/02/Delhi-Public-School-New-Delhi.jpg"
         },
         {
-            "schoolname": "Elite Academy",
-            "city": "Houston",
-            "board": "Private",
-            "cost": 22000,
-            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/Lebanon_High_School_Kentucky.jpg"
-        },
-        {
-            "schoolname": "Meadowbrook Middle School",
-            "city": "Dallas",
+            "schoolname": "The Deens Academy",
+            "city": "Bangalore",
             "board": "Public",
-            "cost": 7500,
-            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/Lebanon_High_School_Kentucky.jpg"
+            "cost": 145000,
+            "imageUrl": "https://www.deenscollege.com/wp-content/uploads/2022/06/pulatest.jpg"
         },
         {
-            "schoolname": "Harborview Prep",
-            "city": "Seattle",
-            "board": "Private",
-            "cost": 24000,
-            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/Lebanon_High_School_Kentucky.jpg"
-        }
-    ])
+            "schoolname": "Christ Academy",
+            "city": "Bangalore",
+            "board": "Public",
+            "cost": 95000,
+            "imageUrl": "https://lh5.googleusercontent.com/p/AF1QipNI4r45_q0b9WKThc1AZYX3pl_0-HYRbj7206JA=w1080-k-no"
+        },
+        {
+            "schoolname": "Iris Florets World School",
+            "city": "Hyderabad",
+            "board": "Public",
+            "cost": 135000,
+            "imageUrl": "https://www.irisfloretsworldschool.com/wp-content/uploads/2023/05/Iris-Florets-Best-CBSE-School-in-Gajularamaram-Hyderabad-building.jpg"
+        },
+        {
+            "schoolname": "Dhatrak Model School",
+            "city": "Hyderabad",
+            "board": "Public",
+            "cost": 125000,
+            "imageUrl": "https://images.jdmagicbox.com/comp/hyderabad/g3/040pxx40.xx40.170310152914.z7g3/catalogue/dhatrak-model-school-suchitra-cross-road-hyderabad-schools-e69hfmf9z8.jpg"
+        },
+        {
+            "schoolname": "St Peter's High School",
+            "city": "Hyderabad",
+            "board": "Public",
+            "cost": 115000,
+            "imageUrl": "https://stpetersschoolbangalore.com/assets/img/new-img/st-peters-cover.png"
+        },
+        {
+            "schoolname": "Sri Sadeesha School",
+            "city": "Hyderabad",
+            "board": "Public",
+            "cost": 110000,
+            "imageUrl": "https://images.jdmagicbox.com/comp/hyderabad/w5/040pxx40.xx40.161118120237.j4w5/catalogue/the-creek-planet-school-neptune-campus-kukatpally-hyderabad-schools-0kl0rmkvuf.jpg?clr=#3d3329"
+        },
+        {
+            "schoolname": "Chinmaya Vidyalaya",
+            "city": "Chennai",
+            "board": "Public",
+            "cost": 140000,
+            "imageUrl": "https://www.chinmayavaduthala.edu.in/images/School-View.jpg"
+        },
+        {
+            "schoolname": "KRM Public School",
+            "city": "Chennai",
+            "board": "Public",
+            "cost": 125000,
+            "imageUrl": "https://yellowslate.com/blog/wp-content/uploads/2020/02/2022-03-22.jpg"
+        },
+        {
+            "schoolname": "Sishya School",
+            "city": "Chennai",
+            "board": "Public",
+            "cost": 115000,
+            "imageUrl": "https://yellowslate.com/blog/wp-content/uploads/2020/02/DSC05666.jpg"
+        },
+        {
+            "schoolname": "Bharatiya Vidya Bhavan School",
+            "city": "Chennai",
+            "board": "Public",
+            "cost": 110000,
+            "imageUrl": "https://yellowslate.com/blog/wp-content/uploads/2020/02/2017-12-10.jpg"
+        }])
 
     return (
         <div className="d-flex p-4">

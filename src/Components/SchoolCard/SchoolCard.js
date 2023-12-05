@@ -8,7 +8,7 @@ const SchoolCard = ({ data }) => {
 
     return (
         <div className='d-flex bg-light rounded' style={{ height: "150px", maxWidth: "560px", boxShadow: "2px 3px 7px 0px #bebebe" }}>
-            <div><img height="150px" className='rounded' src={data.imageUrl} /></div>
+            <div className="w-100"><img height="150px" className='rounded w-100' style={{ objectFit: "cover" }} src={data.imageUrl} /></div>
             <div className='p-2 w-100'>
                 <div className='d-flex flex-column'>
                     <b style={{ fontSize: "17px" }}>{data.schoolname}</b>
